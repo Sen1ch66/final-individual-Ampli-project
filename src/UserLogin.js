@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import LoginHeader from './Components/LoginHeader/LoginHeader.js';
 import { NavLink } from 'react-router-dom';
+import FormLogin from './Components/FormLogin/FormLogin.js';
 import './UserLogin.css'
 function UserLogin() {
     const [isShowForm, setIsShowForm] = useState(true)
   return (
       <div className="userLogin">
-        
+        {isShowForm && <FormLogin openForm={setIsShowForm} />}
           <LoginHeader openform={setIsShowForm}/>
           <div className="mainScreen">
               <section className="mainScreenContent">
