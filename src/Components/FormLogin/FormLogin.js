@@ -2,8 +2,7 @@ import './FormLogin.css'
 import { TextField, Button } from '@mui/material';
 import { useRef } from 'react';
 
-function FormLogin(props) {
-    const { openForm } = props;
+function FormLogin({ openForm }) {
     const spinner = useRef(null)
     function onSubmit(event) {
         event.preventDefault();

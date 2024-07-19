@@ -1,4 +1,5 @@
 import './UserProfile.css'
+import LoginState from '../../mobX/LoginState'
 function UserProfile(p){
   const {setIsLogged} = p
     return(
@@ -64,7 +65,7 @@ function UserProfile(p){
       </div>
       <img
         className="user-profile__avatar"
-        src="https://img.freepik.com/free-photo/businessman-with-sunglasses-and-mustache-in-a-circle-3d-rendering_1142-41006.jpg?w=740&t=st=1715692451~exp=1715693051~hmac=481520812328dddeb4b3aab5a89636e963992a0fec59cd54b8772c528985a36f"
+        src="https://cdn-icons-png.flaticon.com/512/149/149452.png"
         alt="avatar"
       />
     </div>

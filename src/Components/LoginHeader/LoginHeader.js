@@ -1,6 +1,7 @@
 import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
 import { NavLink } from 'react-router-dom';
+import LoginState from '../../mobX/LoginState.js';
 function LoginHeader(props) {
     const { openForm, isLogged, setIsLogged} = props;
     return (
