@@ -1,14 +1,19 @@
 import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
-function LoginHeader(props){
+import { NavLink } from 'react-router-dom';
+function LoginHeader(props) {
     const { openForm, isLogged } = props;
-    return(
+    return (
         <header>
-            <h1>Проект "Сайт логінізації"</h1>
+            <div className='headerTitle'>
+                <h1>Проект "Сайт логінізації"</h1>
+                <NavLink to={'/AboutMe'}>
+                    <p>Про мене</p>
+                </NavLink>
+            </div>
             <span></span>
             <span></span>
-            <span></span>
-            {isLogged === false ? <button className='headerButtonLogin' onClick={()=> {openForm(true)}}>Увійти</button>: <UserProfile/>}
+            {isLogged === false ? <button className='headerButtonLogin' onClick={() => { openForm(true) }}>Увійти</button> : <UserProfile />}
         </header>
     )
 }
