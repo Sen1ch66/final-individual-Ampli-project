@@ -12,29 +12,16 @@ function FormLogin(props) {
     function onWrongClick(e) {
         if (e.target.id === 'Background') {
             openForm(false)
+            console.log(848)
         }
     }
-    const loginRequest = (e) => {
-        spinner.current.style.opacity = 1;
-        e.target.disabled = true;
-        fetch("https://jsonplaceholder.typicode.com/users/10")
-            .then((response) => response.json())
-            .then((json) => {
-                console.log(json);
-                spinner.current.style.opacity = 0;
-                e.target.disabled = false;
-                UserState.setUserData(json)
-                isLoginState.setIsLogin()
-                openForm(false)
-            });
-    };
     return (
-        <div className='Background' onClick={onWrongClick}>
-            <form>
+        <div className='Background' onClick={onWrongClick} id='Background'>
+            <form onSubmit={onSubmit}>
                 <h1>Щоб почати, залогіньтесь</h1>
-                <TextField id="filled-basic" label="Filled" variant="filled" />
-                <TextField id="filled-basic" label="Filled" variant="filled" />
-                <Button variant="outlined">Outlined</Button>
+                <TextField id="filled-basic" label="Логін" variant="filled" />
+                <TextField id="filled-basic" label="Пароль" variant="filled" />
+                <Button variant="outlined">Увійти</Button>
             </form>
         </div>
     )

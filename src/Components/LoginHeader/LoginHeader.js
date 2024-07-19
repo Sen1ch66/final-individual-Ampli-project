@@ -1,6 +1,7 @@
 import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
-function LoginHeader(){
+function LoginHeader(props){
+    const { openForm } = props;
     return(
         <header>
             <span></span>
@@ -8,7 +9,7 @@ function LoginHeader(){
             <span></span>
             <span></span>
             <UserProfile/>
-            <button className='headerButtonLogin'>Увійти</button>
+            <button className='headerButtonLogin' onClick={()=> {openForm(true)}}>Увійти</button>
         </header>
     )
 }
