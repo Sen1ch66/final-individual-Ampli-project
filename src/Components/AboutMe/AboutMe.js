@@ -1,6 +1,10 @@
 import './AboutMe.css'
 import { useRef } from 'react'
-import MyPhoto from '../../Imgs/25231.png'
+import MyPhoto from '../../Imgs/IMG_2573.jpg'
+import gitPhoto from '../../Imgs/25231.png'
+import instaPhoto from '../../Imgs/instaico.png'
+import classRoom from '../../Imgs/png-transparent-google-classroom-teacher-g-suite-computer-icons-class-room-angle-text-class.png'
+import Trello from '../../Imgs/web-trello-icon.png'
 import { NavLink } from 'react-router-dom'
 function AboutMe() {
     const extraInfo = useRef(null)
@@ -9,8 +13,8 @@ function AboutMe() {
     const aboutMe = useRef(null)
     function showSection(){
       try{
-        extraInfo.style.display = 'flex';
-        sectionButton.remove()
+        extraInfo.current.style.display = 'flex';
+        sectionButton.current.remove()
       }
       catch(e){
         console.log(e)
@@ -31,7 +35,7 @@ function AboutMe() {
         </header>
         <div id="themeSwitcher" ref={themeSwitcher}>
           <span>Хочете змінити тему?</span>
-          <input type="button" value="Переключити тему" id="themeSwitch" onClick={themeSwitch}/>
+          <input type="button" value="Переключити тему" id="themeSwitch" onClick={themeSwitch} ref={sectionButton}/>
         </div>
         <section id="aboutMe" ref={aboutMe}>
           <div className="aboutMe-container">
@@ -52,12 +56,10 @@ function AboutMe() {
           <h2>Додаткова інформація</h2>
           <div className="extraInfo-content">
             <div>
-  
               <h3>Геймер</h3>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse iusto dolor veritatis, dignissimos,
                 tenetur omnis sapiente hic deleniti unde consequuntur deserunt excepturi nisi inventore veniam
                 doloribus quis natus nesciunt ex.</p>
-  
             </div>
             <div>
               <h3>Lorem ipsum</h3>
@@ -72,24 +74,26 @@ function AboutMe() {
             <h2>Посилання</h2>
             <h2>Якірні посилання</h2>
             <h2>Мої контакти</h2>
-            <h2><a href="">До головного проекту</a></h2>
+            <NavLink to={'/'}>
+              <h2>На головну</h2>
+            </NavLink>
           </div>
           <div className="footerBlock">
             <div className="footerLinks">
               <div>
-                <img src="./Imgs/web-trello-icon.png" alt="trello icon"/>
+                <img src={Trello} alt="trello icon"/>
                   <a href="/">Trello</a>
               </div>
               <div>
-                <img src="./Imgs/25231.png" alt="github icon"/>
+                <img src={gitPhoto} alt="github icon"/>
                   <a href="/">Github</a>
               </div>
               <div>
-                <img src="./Imgs/instaico.png" alt="instagram icon"/>
+                <img src={instaPhoto} alt="instagram icon"/>
                   <a href="/">Instagram</a>
               </div>
               <div>
-                <img src="./Imgs/png-transparent-google-classroom-teacher-g-suite-computer-icons-class-room-angle-text-class.png" alt="instagram icon"/>
+                <img src={classRoom} alt="instagram icon"/>
                   <a href="/">Клас</a>
               </div>
             </div>
@@ -99,11 +103,8 @@ function AboutMe() {
             </div>
             <div className="footerContacts">
               <p>senazahovajko@gmail.com</p>
-              <p>senazahovajko@gmail.com</p>
+              <p>+380971998717</p>
             </div>
-            <NavLink to={'/'}>
-              На головну
-            </NavLink>
           </div>
         </footer>
       </>

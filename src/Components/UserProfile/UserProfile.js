@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
 import './UserProfile.css'
-function UserProfile(){
+import isLoginState from '../../mobX/LoginState'
+const UserProfile= ()=>{
     return(
         <div className="user-profile">
       <div className="user-profile__textWrapper">
@@ -30,11 +30,8 @@ function UserProfile(){
           </svg>
           <span className="user-profile__mail">Імейл</span>
         </div>
-        <NavLink to={'/AboutMe'}>
-            <a href='/'>Сайт про мене</a>
-        </NavLink>
         <div
-          className="user-profile__logoutWrapper"
+          className="user-profile__logoutWrapper" onClick={()=> {isLoginState.setIsLogin()}}
         >
           <svg
             width="24"
@@ -62,12 +59,12 @@ function UserProfile(){
               fill="#414141"
             />
           </svg>
-          <span className="user-profile__logout">Вийти</span>
+          <span className="user-profile__logout" >Вийти</span>
         </div>
       </div>
       <img
         className="user-profile__avatar"
-        src="https://img.freepik.com/free-photo/businessman-with-sunglasses-and-mustache-in-a-circle-3d-rendering_1142-41006.jpg?w=740&t=st=1715692451~exp=1715693051~hmac=481520812328dddeb4b3aab5a89636e963992a0fec59cd54b8772c528985a36f"
+        src="https://cdn-icons-png.flaticon.com/512/149/149452.png"
         alt="avatar"
       />
     </div>

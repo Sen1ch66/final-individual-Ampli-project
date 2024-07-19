@@ -1,8 +1,10 @@
 import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
 import { NavLink } from 'react-router-dom';
-function LoginHeader(props) {
-    const { openForm, isLogged } = props;
+import isLoginState from '../../mobX/LoginState.js';
+import { observer } from 'mobx-react';
+const LoginHeader= observer((props)=> {
+    const { openForm, setIsLogged, isLogged} = props;
     return (
         <header>
             <div className='headerTitle'>
@@ -13,8 +15,9 @@ function LoginHeader(props) {
             </div>
             <span></span>
             <span></span>
-            {isLogged === false ? <button className='headerButtonLogin' onClick={() => { openForm(true) }}>Увійти</button> : <UserProfile />}
+            {isLoginState.isLogin === false ? <button className='headerButtonLogin' onClick={() => { openForm(true) }}>Увійти</button> :
+             <UserProfile setIsLogged={setIsLogged}/>}
         </header>
     )
-}
+})
 export default LoginHeader;

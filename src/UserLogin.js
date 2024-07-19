@@ -1,22 +1,23 @@
 import { useState } from 'react';
 import LoginHeader from './Components/LoginHeader/LoginHeader.js';
-import { NavLink } from 'react-router-dom';
 import FormLogin from './Components/FormLogin/FormLogin.js';
+import isLoginState from './mobX/LoginState.js';
 import './UserLogin.css'
-function UserLogin() {
+import { observer } from 'mobx-react';
+const UserLogin = observer(() => {
     const [isShowForm, setIsShowForm] = useState(false)
-    const [isLogged, setIsLogged] = useState(false)
+    const [isLogged, setIsLogged] = useState(true)
   return (
       <div className="userLogin">
         {isShowForm && <FormLogin openForm={setIsShowForm}/>}
-          <LoginHeader openForm={setIsShowForm} isLogged={isLogged}/>
+          <LoginHeader openForm={setIsShowForm} isLogged={isLogged} setIsLogged={setIsLogged}/>
           <div className="mainScreen">
               <section className="mainScreenContent">
-                  <h2>{isLogged ? 'Привіт користувач': "Привіт гість"}</h2>
-                  {isLogged && <p>Щоб побачити прихований контент - залогіньтесь</p>}
+                  <h2>{isLoginState.isLogin ? 'Привіт користувач': "Привіт гість"}</h2>
+                  {isLoginState.isLogin && <p>Щоб побачити прихований контент - залогіньтесь</p>}
               </section>
           </div>
       </div>
   )
-}
+})
 export default UserLogin;
