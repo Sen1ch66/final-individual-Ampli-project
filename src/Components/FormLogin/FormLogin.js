@@ -11,7 +11,6 @@ function FormLogin({ openForm }) {
     function onWrongClick(e) {
         if (e.target.id === 'Background') {
             openForm(false)
-            console.log(848)
         }
     }
     return (

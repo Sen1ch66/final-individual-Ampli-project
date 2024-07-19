@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class LoginState{
-    isLogin = false;
+    isLogin = true;
     constructor(){
         makeAutoObservable(this)
     }
@@ -9,5 +9,4 @@ class LoginState{
         this.isLogin = !this.isLogin
     }
 }
-const isLoginState = new LoginState()
-export default LoginState;
+export default new LoginState();

@@ -3,7 +3,8 @@ import LoginHeader from './Components/LoginHeader/LoginHeader.js';
 import FormLogin from './Components/FormLogin/FormLogin.js';
 import LoginState from './mobX/LoginState.js';
 import './UserLogin.css'
-function UserLogin() {
+import { observer } from 'mobx-react';
+const UserLogin = observer(() => {
     const [isShowForm, setIsShowForm] = useState(false)
     const [isLogged, setIsLogged] = useState(true)
   return (
@@ -18,5 +19,5 @@ function UserLogin() {
           </div>
       </div>
   )
-}
+})
 export default UserLogin;
