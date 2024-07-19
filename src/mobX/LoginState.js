@@ -9,4 +9,5 @@ class LoginState{
         this.isLogin = !this.isLogin
     }
 }
-export default new LoginState();
+const isLoginState = new LoginState()
+export default isLoginState;

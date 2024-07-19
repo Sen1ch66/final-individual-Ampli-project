@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import LoginHeader from './Components/LoginHeader/LoginHeader.js';
 import FormLogin from './Components/FormLogin/FormLogin.js';
-import LoginState from './mobX/LoginState.js';
+import isLoginState from './mobX/LoginState.js';
 import './UserLogin.css'
 import { observer } from 'mobx-react';
 const UserLogin = observer(() => {
@@ -13,8 +13,8 @@ const UserLogin = observer(() => {
           <LoginHeader openForm={setIsShowForm} isLogged={isLogged} setIsLogged={setIsLogged}/>
           <div className="mainScreen">
               <section className="mainScreenContent">
-                  <h2>{LoginState.isLogged ? 'Привіт користувач': "Привіт гість"}</h2>
-                  {LoginState.isLogged && <p>Щоб побачити прихований контент - залогіньтесь</p>}
+                  <h2>{isLoginState.isLogin ? 'Привіт користувач': "Привіт гість"}</h2>
+                  {isLoginState.isLogin && <p>Щоб побачити прихований контент - залогіньтесь</p>}
               </section>
           </div>
       </div>

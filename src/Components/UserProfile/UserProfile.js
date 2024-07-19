@@ -1,5 +1,5 @@
 import './UserProfile.css'
-import LoginState from '../../mobX/LoginState'
+import isLoginState from '../../mobX/LoginState'
 const UserProfile= ()=>{
     return(
         <div className="user-profile">
@@ -31,7 +31,7 @@ const UserProfile= ()=>{
           <span className="user-profile__mail">Імейл</span>
         </div>
         <div
-          className="user-profile__logoutWrapper" onClick={()=> {LoginState.setIsLogin(true)}}
+          className="user-profile__logoutWrapper" onClick={()=> {isLoginState.setIsLogin()}}
         >
           <svg
             width="24"
