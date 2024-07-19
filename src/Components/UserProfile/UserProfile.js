@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
 import './UserProfile.css'
-function UserProfile(){
+function UserProfile(p){
+  const {setIsLogged} = p
     return(
         <div className="user-profile">
       <div className="user-profile__textWrapper">
@@ -30,11 +30,8 @@ function UserProfile(){
           </svg>
           <span className="user-profile__mail">Імейл</span>
         </div>
-        <NavLink to={'/AboutMe'}>
-            <a href='/'>Сайт про мене</a>
-        </NavLink>
         <div
-          className="user-profile__logoutWrapper"
+          className="user-profile__logoutWrapper" onClick={()=> {setIsLogged(false)}}
         >
           <svg
             width="24"
@@ -62,7 +59,7 @@ function UserProfile(){
               fill="#414141"
             />
           </svg>
-          <span className="user-profile__logout">Вийти</span>
+          <span className="user-profile__logout" >Вийти</span>
         </div>
       </div>
       <img

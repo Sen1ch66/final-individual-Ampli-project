@@ -2,7 +2,7 @@ import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
 import { NavLink } from 'react-router-dom';
 function LoginHeader(props) {
-    const { openForm, isLogged } = props;
+    const { openForm, isLogged, setIsLogged} = props;
     return (
         <header>
             <div className='headerTitle'>
@@ -13,7 +13,8 @@ function LoginHeader(props) {
             </div>
             <span></span>
             <span></span>
-            {isLogged === false ? <button className='headerButtonLogin' onClick={() => { openForm(true) }}>Увійти</button> : <UserProfile />}
+            {isLogged === false ? <button className='headerButtonLogin' onClick={() => { openForm(true) }}>Увійти</button> :
+             <UserProfile setIsLogged={setIsLogged}/>}
         </header>
     )
 }
