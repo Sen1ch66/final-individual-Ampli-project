@@ -8,8 +8,8 @@ form{
     width: 400px;
     background: white;
     position: absolute;
-    top: calc(50%-150px);
-    left: calc(50%-175px);
+    top: 35%;
+    left: 40%;
 }
 .Background {
     background: rgba(0, 0, 0, 0.8);
