@@ -5,14 +5,15 @@ import FormLogin from './Components/FormLogin/FormLogin.js';
 import './UserLogin.css'
 function UserLogin() {
     const [isShowForm, setIsShowForm] = useState(false)
+    const [isLogged, setIsLogged] = useState(false)
   return (
       <div className="userLogin">
         {isShowForm && <FormLogin openForm={setIsShowForm}/>}
-          <LoginHeader openForm={setIsShowForm}/>
+          <LoginHeader openForm={setIsShowForm} isLogged={isLogged}/>
           <div className="mainScreen">
               <section className="mainScreenContent">
-                  <h1>Вітаємо</h1>
-                  <p>Щоб побачити прихований контент - залогіньтесь</p>
+                  <h2 >Вітаємо</h2 >
+                  {isLogged && <p>Щоб побачити прихований контент - залогіньтесь</p>}
               </section>
               <NavLink to={'/AboutMe'}>
                 Про мене

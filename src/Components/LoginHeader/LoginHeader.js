@@ -1,15 +1,14 @@
 import './LoginHeader.css'
 import UserProfile from '../UserProfile/UserProfile.js'
 function LoginHeader(props){
-    const { openForm } = props;
+    const { openForm, isLogged } = props;
     return(
         <header>
+            <h1>Проект "Сайт логінізації"</h1>
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <UserProfile/>
-            <button className='headerButtonLogin' onClick={()=> {openForm(true)}}>Увійти</button>
+            {isLogged === false ? <button className='headerButtonLogin' onClick={()=> {openForm(true)}}>Увійти</button>: <UserProfile/>}
         </header>
     )
 }
