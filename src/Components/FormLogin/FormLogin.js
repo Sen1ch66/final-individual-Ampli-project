@@ -1,7 +1,7 @@
 import './FormLogin.css'
 import { TextField, Button } from '@mui/material';
 import { useRef } from 'react';
-
+import isLoginState from '../../mobX/LoginState';
 function FormLogin({ openForm }) {
     const spinner = useRef(null)
     function onSubmit(event) {
@@ -19,7 +19,7 @@ function FormLogin({ openForm }) {
                 <h1>Щоб почати, залогіньтесь</h1>
                 <TextField id="filled-basic" label="Логін" variant="filled" />
                 <TextField id="filled-basic" label="Пароль" variant="filled" />
-                <Button variant="outlined">Увійти</Button>
+                <Button variant="outlined" onClick={()=> {isLoginState.setIsLogin()}}>Увійти</Button>
             </form>
         </div>
     )
