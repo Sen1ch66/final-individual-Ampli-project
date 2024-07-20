@@ -129,6 +129,13 @@ h1{
         div{
             max-width: 500px;
             padding: 20px 50px;
+            h3{
+                font-size: 25px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 18px;
+            }
         }
     }
 }
