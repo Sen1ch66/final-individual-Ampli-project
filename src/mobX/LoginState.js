@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class LoginState{
-    isLogin = true;
+    isLogin = false;
     constructor(){
         makeAutoObservable(this)
     }

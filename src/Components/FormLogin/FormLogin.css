@@ -31,3 +31,7 @@ form h1 {
     text-align: center;
     margin-bottom: 18px;
 }
+.spinner-border {
+    opacity: 0;
+    margin-left: 10px;
+}
