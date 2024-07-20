@@ -1,5 +1,5 @@
 import './FormLogin.css'
-import { TextField, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import { useRef } from 'react';
 import isLoginState from '../../mobX/LoginState';
 import UserState from '../../mobX/UserState';
@@ -27,12 +27,10 @@ function FormLogin({ openForm }) {
         fetch(`https://jsonplaceholder.typicode.com/users/1`)
             .then(res => res.json())
             .then(json => {
-                console.log(json);
                 spinner.current.style.opacity = 0;
                 e.target.disabled = false;
                 isLoginState.setIsLogin();
                 UserState.setUserData(json);
-                console.log(json);
                 openForm(false);
             })
             .catch(e => {
