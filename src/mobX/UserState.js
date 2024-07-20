@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx"
-
 class UserStateClass {
     userData = {}
     constructor () {
@@ -10,7 +9,5 @@ class UserStateClass {
         this.userData = data
     }
 }
-
 const UserState = new UserStateClass()
-
 export default UserState;
