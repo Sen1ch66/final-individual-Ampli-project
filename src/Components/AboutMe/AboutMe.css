@@ -53,6 +53,10 @@ a:hover::after{
         justify-content: center;
         align-items: center;
     }
+    a{
+        font-size: 17px;
+        font-weight: 700;
+    }
     nav a:last-child{
         margin-left: 50px;
     }
@@ -93,6 +97,9 @@ h1{
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: #605d5d;
+    border: 1px solid rgb(149, 96, 96);
+    color: white;
     }
     .sectionButton:after{
         content: '>';
@@ -171,7 +178,7 @@ h1{
     font-size: 40px;
     margin-bottom: 20px;
 }
-.footerLnk {
+.footerLnk,.footerContacts {
     font-size: 17px;
     gap: 16px;
     line-height: 27px;
