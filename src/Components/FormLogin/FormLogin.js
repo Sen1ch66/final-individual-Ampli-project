@@ -20,7 +20,7 @@ function FormLogin({ openForm }) {
     const loginRequest = (e)=>{
         spinner.current.style.opacity = 1;
         if(textField.current.value ===''|| password.current.value===''){
-            alert('rfrg')
+            alert('Заповніть всі поля')
         } else {
             fetch(`https://jsonplaceholder.typicode.com/users/${randomNumber}`)
             .then(res=> res.json())
