@@ -62,7 +62,6 @@ function FormLogin({ openForm }) {
                     } else {
                         e.target.disabled = true;
                         loginRequest(e);
-                        console.log('brb');
                     }
                 }}>
                     <span>Увійти</span>
