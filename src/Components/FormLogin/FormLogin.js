@@ -28,9 +28,7 @@ function FormLogin({ openForm }) {
             .then(res => res.json())
             .then(json => {
                 console.log(json);
-                if (spinner.current) {
-                    spinner.current.style.opacity = 0;
-                }
+                spinner.current.style.opacity = 0;
                 e.target.disabled = false;
                 isLoginState.setIsLogin();
                 UserState.setUserData(json);
@@ -53,12 +51,12 @@ function FormLogin({ openForm }) {
                 <input placeholder='Логін' ref={textField} />
                 <input placeholder='Пароль' ref={password} type='password' />
                 <Button variant="outlined" onClick={(e) => {
-                    if (password.current.value !== 'zos9807' || textField.current.value !== 'Arsenii89_0') {
+                    if (textField.current.value === '' || password.current.value === '') {
+                        alert('Заповніть всі поля');
+                    } else if (password.current.value !== 'zos9807' || textField.current.value !== 'Arsenii89_0') {
                         alert('неправильний логін або пароль');
                     } else if (textField.current.value.length < 2 || password.current.value.length < 3) {
                         alert('Логін або пароль закороткий');
-                    } else if (textField.current.value === '' || password.current.value === '') {
-                        alert('Заповніть всі поля');
                     } else {
                         e.target.disabled = true;
                         loginRequest(e);
