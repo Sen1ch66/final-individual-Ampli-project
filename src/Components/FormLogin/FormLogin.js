@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import isLoginState from '../../mobX/LoginState';
 import UserState from '../../mobX/UserState';
 function FormLogin({ openForm }) {
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
     const spinner = useRef(null)
     function onSubmit(event) {
         event.preventDefault();
@@ -16,14 +17,15 @@ function FormLogin({ openForm }) {
     }
     const loginRequest = (e)=>{
         spinner.current.style.opacity = 1;
-        fetch('https://jsonplaceholder.typicode.com/users/10')
+        fetch(`https://jsonplaceholder.typicode.com/users/${randomNumber}`)
         .then(res=> res.json())
         .then(json=> {
             console.log(json)
             spinner.current.style.opacity = 0;
             e.target.disabled = false;
             isLoginState.setIsLogin()
-            UserState.userData(json)
+            UserState.setUserData(json)
+            console.log(json)
             openForm(false)
 
         })
