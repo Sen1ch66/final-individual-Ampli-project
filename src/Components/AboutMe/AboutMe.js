@@ -57,15 +57,11 @@ function AboutMe() {
           <div className="extraInfo-content">
             <div>
               <h3>Геймер</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse iusto dolor veritatis, dignissimos,
-                tenetur omnis sapiente hic deleniti unde consequuntur deserunt excepturi nisi inventore veniam
-                doloribus quis natus nesciunt ex.</p>
+              <p>Раньше багато грав і загалом цікавився іграми, тепер трігки менше але всеодно, тепер більше орієнтуюсь на успіх в реальності а не в грі. Як на мене так краще</p>
             </div>
             <div>
-              <h3>Lorem ipsum</h3>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vitae. Odio nihil doloremque nam
-                sed neque quas distinctio accusantium omnis obcaecati, laborum fuga pariatur quaerat asperiores
-                eaque qui, labore id.</p>
+              <h3>Блогер?</h3>
+              <p>Колись знімав відео на ютуб але тепер через брак часу і трохи бажання відклав на потім, думаю потім повернусь не тільки до відео зйомки але і до фотообробки</p>
             </div>
           </div>
         </section>
