@@ -81,12 +81,12 @@ function AboutMe() {
             <div className='proj'>
               <h3>Проекти</h3>
               <ul>
-                <a href='https://lighthearted-taiyaki-5e5eba.netlify.app/' target='_blank'>Випускна з бегінера</a>
-                <a href='https://kalkulator-ne-tane.onrender.com/' target='_blank'>Калькулятор js</a>
-                <a href='https://66ba739ba9b1db3d62f8c80a--cozy-pegasus-fc89f1.netlify.app/' target='_blank'>Рандомайзер js</a>
-                <a href='https://calculator-on-react.onrender.com/' target='_blank'>Калькулятор реакт</a>
-                <a href='https://todolist-3agi.onrender.com/' target='_blank'>Список справ</a>
-                <a href='https://js-snake-game-ycqp.onrender.com/' target='_blank'>Змійка js</a>
+                <li><a href='https://lighthearted-taiyaki-5e5eba.netlify.app/' target='_blank'>Випускна з бегінера</a></li>
+                <li><a href='https://kalkulator-ne-tane.onrender.com/' target='_blank'>Калькулятор js</a></li>
+                <li><a href='https://66ba739ba9b1db3d62f8c80a--cozy-pegasus-fc89f1.netlify.app/' target='_blank'>Рандомайзер js</a></li>
+                <li><a href='https://calculator-on-react.onrender.com/' target='_blank'>Калькулятор реакт</a></li>
+                <li><a href='https://todolist-3agi.onrender.com/' target='_blank'>Список справ</a></li>
+                <li><a href='https://js-snake-game-ycqp.onrender.com/' target='_blank'>Змійка js</a></li>
               </ul>
             </div>
           </div>

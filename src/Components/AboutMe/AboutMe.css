@@ -144,6 +144,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    padding-top: 15px;
     align-items: center;
     min-height: 75vh;
     .extraInfo-content {
@@ -152,7 +153,14 @@ h1 {
         flex-wrap: wrap;
         align-items: center;
         gap: 100px;
-
+        .proj{
+            display: flex;
+            flex-direction: column;
+            a{
+                display: block;
+                margin-top: 5px;
+            }
+        }
         div {
             max-width: 500px;
             padding: 20px 50px;
