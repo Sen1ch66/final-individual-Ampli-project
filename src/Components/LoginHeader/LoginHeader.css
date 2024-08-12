@@ -1,20 +1,37 @@
 header {
-    background-color: aquamarine;
+    background-color: rgb(127, 238, 255);
     padding: 1rem 2rem; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
- .header__button-login {
-    border-radius: 6px;
-    padding: 6px 10px;
-    background-color: tomato;
-    transition: all .6s;
-    color: wheat;
-    font-weight: bold; 
-   }
- .header__button-login:hover {
+.headerTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a{
+        width: fit-content;
+    }
+    p{
+        font-weight: 900;
+        font-size: 20px;
+    }
+    p:before{
+        content: '<';
+        margin-right: 5px;
+        color: brown;
+    }
+}
+ .headerButtonLogin{
+    padding: 10px 20px;
+    color: aliceblue;
+    background-color: orange;
+    border: none;
+    font-size: 25px;
+ }
+ .headerButtonLogin:hover {
     cursor: pointer;
+    border: 1px solid white;
     box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
  }
