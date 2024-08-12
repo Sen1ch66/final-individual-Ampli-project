@@ -24,6 +24,7 @@ function AboutMe() {
   function themeSwitch(){
     header.current.classList.toggle('headerBlack')
     aboutMe.current.classList.toggle('aboutMeBlack')
+    extraInfo.current.classList.toggle('extraInfo-black')
   }
     return (
       <>
@@ -61,7 +62,32 @@ function AboutMe() {
             </div>
             <div>
               <h3>Блогер?</h3>
-              <p>Колись знімав відео на ютуб але тепер через брак часу і трохи бажання відклав на потім, думаю потім повернусь не тільки до відео зйомки але і до фотообробки</p>
+              <p>Колись знімав відео на ютуб але тепер через брак часу і трохи бажання відклав на потім, думаю потім повернусь не тільки до відео зйомки але і до фотообробки.
+                Отримав сертифікат бегінер Ampli за завершення курсу з відзнакою
+              </p>
+            </div>
+            <div>
+              <h3>Скіли</h3>
+              <ul>
+                <li>Основи js 7/10</li>
+                <li>html 10/10</li>
+                <li>css 7/10</li>
+                <li>react js 5/10</li>
+                <li>Тайм менеджмент 3/10</li>
+                <li>Ораторство 9/10</li>
+                <li>Лідерство 7/10</li>
+              </ul>
+            </div>
+            <div className='proj'>
+              <h3>Проекти</h3>
+              <ul>
+                <a href='https://lighthearted-taiyaki-5e5eba.netlify.app/' target='_blank'>Випускна з бегінера</a>
+                <a href='https://kalkulator-ne-tane.onrender.com/' target='_blank'>Калькулятор js</a>
+                <a href='https://66ba739ba9b1db3d62f8c80a--cozy-pegasus-fc89f1.netlify.app/' target='_blank'>Рандомайзер js</a>
+                <a href='https://calculator-on-react.onrender.com/' target='_blank'>Калькулятор реакт</a>
+                <a href='https://todolist-3agi.onrender.com/' target='_blank'>Список справ</a>
+                <a href='https://js-snake-game-ycqp.onrender.com/' target='_blank'>Змійка js</a>
+              </ul>
             </div>
           </div>
         </section>
@@ -78,19 +104,19 @@ function AboutMe() {
             <div className="footerLinks">
               <div>
                 <img src={Trello} alt="trello icon"/>
-                  <a href="/">Trello</a>
+                  <a href="https://trello.com/b/WK95kJZY/arsenii-zakhovaiko-afe34-individual-final-ampli-project" target='_blank'>Trello</a>
               </div>
               <div>
                 <img src={gitPhoto} alt="github icon"/>
-                  <a href="/">Github</a>
+                  <a href="https://github.com/Sen1ch66/" target='_blank'>Github</a>
               </div>
               <div>
                 <img src={instaPhoto} alt="instagram icon"/>
-                  <a href="/">Instagram</a>
+                  <a href="https://www.instagram.com/ars1.zahx06/" target='_blank'>Instagram</a>
               </div>
               <div>
                 <img src={classRoom} alt="instagram icon"/>
-                  <a href="/">Клас</a>
+                  <a href="https://classroom.google.com/c/NjIxNzEzMDc0ODU2" target='_blank'>Клас</a>
               </div>
             </div>
             <div className="footerLnk">
