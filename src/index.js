@@ -5,6 +5,7 @@ import AboutMe from './Components/AboutMe/AboutMe';
 import PageNotFound from './Components/PageIsntFound/PageIsntFound';
 import UserLogin from './UserLogin';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Risks from './Components/Risks/Risks';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path='/' element={<UserLogin/>}/>
       <Route path='/AboutMe' element={<AboutMe/>}/>
+      <Route path='/Risks' element={<Risks/>}/>
       <Route path='*' element={<PageNotFound/>}/>
     </Routes>
     </BrowserRouter>

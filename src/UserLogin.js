@@ -6,6 +6,7 @@ import './UserLogin.css'
 import { observer } from 'mobx-react';
 import UserState from './mobX/UserState.js';
 import ToDoList from './Components/ToDoLIst/ToDoList.js';
+import { NavLink } from 'react-router-dom'
 const UserLogin = observer(() => {
   const [isShowForm, setIsShowForm] = useState(false)
   const [isLogged, setIsLogged] = useState(true)
@@ -20,6 +21,11 @@ const UserLogin = observer(() => {
             <ToDoList/>
           }
         </section>
+        <NavLink to={'/Risks'}>
+         <h2 className='pageSwitcher'>
+          Оцінити ризики командної роботи
+         </h2>
+        </NavLink>
       </div>
     </div>
   )
