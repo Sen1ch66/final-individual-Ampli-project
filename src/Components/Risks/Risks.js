@@ -5,17 +5,31 @@ function Risks() {
         <>
             <section id='Risks'>
                 <h1>Ризики командної роботи над проектом</h1>
+                <ol className='listOfRisks'>
+                    <li>Випадковий пуш поламаного коду в master і подальший деплой</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
                 <table>
-                    <caption>A summary of the UK's most famous punk bands</caption>
+                    <caption>Загроза ризику</caption>
                     <thead>
                         <tr>
-                            <td>grg</td>
-                            <td>reg</td>
                             <td>rgeg</td>
                         </tr>
                     </thead>
-                    <tbody></tbody>
-                    <tfoot></tfoot>
+                    <tbody>
+                        <tr>gg</tr>
+                        <tr>gg</tr>
+                        <tr>gg</tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>gg</tr>
+                        <tr>gg</tr>
+                        <tr>gg</tr>
+                    </tfoot>
                 </table>
                 <NavLink to={'/'}>
                     <h2 className='pageSwitcher'>

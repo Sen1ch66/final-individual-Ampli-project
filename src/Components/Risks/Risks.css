@@ -1,6 +1,9 @@
 #Risks{
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
     gap: 10px;
     justify-content: center;
+}
+table, thead, tbody, tfoot{
+    border: 1px solid black;
 }
